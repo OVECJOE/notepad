@@ -3,7 +3,7 @@ import React, { createContext, useReducer, useEffect, useState } from 'react';
 export const NotesContext = createContext();
 
 // interface 
-const NotesContextProvider = () => {
+const NotesContextProvider = ({ children }) => {
     const [allNotes, dispatch] = useState(
       JSON.parse(localStorage.getItem('allNotes')) ?? []
     )
